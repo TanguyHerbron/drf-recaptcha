@@ -16,8 +16,10 @@ class RecaptchaResponse:
 
 def recaptcha_request(params):
     request_object = Request(
-        url="https://%s/recaptcha/api/siteverify"
-        % getattr(settings, "DRF_RECAPTCHA_DOMAIN", DEFAULT_RECAPTCHA_DOMAIN),
+        url="https://{0}/{1}".format(
+            getattr(settings, "DRF_RECAPTCHA_DOMAIN", DEFAULT_RECAPTCHA_DOMAIN),
+            getattr(settings, "DRF_RECAPTCHA_URL", DEFAULT_RECAPTCHA_URL),
+        ),
         data=params,
         headers={
             "Content-type": "application/x-www-form-urlencoded",

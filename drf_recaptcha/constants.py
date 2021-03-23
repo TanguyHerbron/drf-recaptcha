@@ -9,6 +9,7 @@
 TEST_V2_SECRET_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
 
 DEFAULT_RECAPTCHA_DOMAIN = "www.google.com"
+DEFAULT_RECAPTCHA_URL = "recaptcha/api/siteverify"
 
 # https://developers.google.com/recaptcha/docs/v3
 #
