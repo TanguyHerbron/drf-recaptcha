@@ -18,7 +18,7 @@ def recaptcha_request(params):
     request_object = Request(
         url="https://{0}/{1}".format(
             getattr(settings, "DRF_RECAPTCHA_DOMAIN", DEFAULT_RECAPTCHA_DOMAIN),
-            getattr(settings, "DRF_RECAPTCHA_URL", DEFAULT_RECAPTCHA_URL),
+            getattr(settings, "DRF_RECAPTCHA_URL", ""),
         ),
         data=params,
         headers={
