@@ -16,10 +16,7 @@ class RecaptchaResponse:
 
 def recaptcha_request(params):
     request_object = Request(
-        url="https://{0}/{1}".format(
-            getattr(settings, "DRF_RECAPTCHA_DOMAIN", DEFAULT_RECAPTCHA_DOMAIN),
-            getattr(settings, "DRF_RECAPTCHA_URL", ""),
-        ),
+        url="https://{0}/".format(getattr(settings, "DRF_RECAPTCHA_DOMAIN", DEFAULT_RECAPTCHA_DOMAIN)),
         data=params,
         headers={
             "Content-type": "application/x-www-form-urlencoded",
